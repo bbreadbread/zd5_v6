@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добро пожаловать на экран комиссии"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+        tools:ignore="MissingConstraints"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_add_student"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_welcome"
+            android:text="Добавить студента"
+            android:background="@drawable/button"
+            tools:ignore="NotSibling" />
+
+        <Button
+            android:id="@+id/btn_view_students"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_add_student"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button"
+            android:text="Список студентов" />
+
+        <Button
+            android:id="@+id/btn_add_teacher"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_view_students"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button"
+            android:text="Добавить преподавателя" />
+
+        <Button
+            android:id="@+id/btn_statistics"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_add_teacher"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button"
+            android:text="Статистика" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
